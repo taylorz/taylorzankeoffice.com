@@ -69,15 +69,23 @@
 }
 @keyframes fadeInUp {
   0% {
-    transform: translateY($buffer*6);
-    -webkit-transform: translateY($buffer*6);
-    -moz-transform: translateY($buffer*6);
+    transform: translateY($buffer*2);
+    -webkit-transform: translateY($buffer*2);
+    -moz-transform: translateY($buffer*2);
     opacity: 0;
   }
   100% {
     transform: translateY(0%);
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }

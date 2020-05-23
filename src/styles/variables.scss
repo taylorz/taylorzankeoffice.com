@@ -2,13 +2,14 @@ $buffer:                            4px;
 
 $bgBody:                             #ffffff;
 $bgColorLight:                       #f1f1f1;
-$bgColorDark:                        #11111a;
+$bgColorDark:                        #33333a;
 
 $darkFontColor:                      $bgColorDark;
 $lightFontColor:                     #ffffff;
+$mediumFontColor:                    #92929D;
 
 $primaryFont:                        "Europa Regular", sans-serif;
-$secondaryFont:                      "Times New Roman", serif;
+$secondaryFont:                      "Atlas Grotesk", sans-serif;
 
 $fontSize:                           14px;
 $fontSizeParagraph:                  $fontSize*1.15;
@@ -17,7 +18,7 @@ $fontSizeHero:                       $fontSize*3;
 $fontSizeCaption:                    $fontSize*.8;
 
 $lineHeight:                         16px;
-$lineHeightParagraph:                $lineHeight*1.25;
+$lineHeightParagraph:                $lineHeight*1.4;
 $lineHeightStatement:                $lineHeight*1.95;
 $lineHeightHero:                     $lineHeight*3.25;
 $lineHeightCaption:                  $lineHeight*.8;

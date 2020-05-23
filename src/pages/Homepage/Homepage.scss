@@ -1,6 +1,34 @@
 @import "../../styles/styles.scss";
 
 .homepage {
-  margin: $buffer*4;
+  padding: $buffer*4;
   font-size: $fontSizeParagraph;
+  line-height: $lineHeightParagraph;
+  color: $darkFontColor;
+  .title {
+    opacity: 0;
+    @include animation(.5s, $easingRegular, $delay1, fadeIn);
+    margin-bottom: $lineHeightParagraph*3;
+  }
+  .description {
+    opacity: 0;
+    @include animation(.5s, $easingRegular, $delay2, fadeIn);
+    font-family: $secondaryFont;
+    .header {
+      &:first-child {
+        margin-top: 0;
+      }
+      margin: $lineHeightParagraph*3 0 $lineHeightParagraph 0;
+    }
+    p {
+      margin-top: 0;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      color: $mediumFontColor;
+      li {}
+    }
+  }
 }//homepage
