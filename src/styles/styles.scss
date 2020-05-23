@@ -1,0 +1,77 @@
+@import '/mixins.scss';
+@import '/variables.scss';
+
+@font-face {
+  font-family: 'Europa Regular';
+  src: url(../assets/fonts/europa-regular/Europa-Regular.eot);
+  src: url(../assets/fonts/europa-regular/Europa-Regular.woff2) format('woff2'),
+       url(../assets/fonts/europa-regular/Europa-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}//*
+body {
+  margin: 0; padding: 0;
+  font-family: $primaryFont;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  a {
+    color: inherit;
+    text-decoration: none;
+    @include transitionRegular;
+    &:link {}
+    &:visited {}
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {}
+  }
+  // .my-node-enter {
+  //     .menu {
+  //       transform: translateX(0%) !important;
+  //     }
+  //     .page-container {
+  //       transform: translateX($menuWidth) !important;
+  //       @include breakpoint(sm) {
+  //         transform: translateX($menuWidthMobile) !important;
+  //       }
+  //       @include breakpoint(md) {
+  //         transform: translateX($menuWidthMd) !important;
+  //       }
+  //     }
+  // }
+  // .my-node-enter-active {
+  //   .menu {
+  //     transform: translateX(calc(-100% - 3px)) !important;
+  //     transition: transform $timing*2 $easingCubic !important;
+  //   }
+  //   .page-container {
+  //     transform: translateX(0%) !important;
+  //     transition: all $timing*2 $easingCubic !important;
+  //   }
+  // }
+  // .my-node-exit {
+  //   .menu {
+  //     transform: translateX(calc(-100% - 3px)) !important;
+  //   }
+  //   .page-container {
+  //     transform: translateX(0%) !important;
+  //   }
+  // }
+  // .my-node-exit-active {
+  //   .menu {
+  //     transform: translateX(calc(-100% - 3px)) !important;
+  //     transition: transform $timing*2 $easingCubic !important;
+  //   }
+  //   .page-container {
+  //     transform: translateX(0%) !important;
+  //     transition: all $timing*2 $easingCubic !important;
+  //   }
+  // }
+}//body

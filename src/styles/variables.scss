@@ -1,0 +1,53 @@
+$buffer:                            4px;
+
+$bgBody:                             #ffffff;
+$bgColorLight:                       #f1f1f1;
+$bgColorDark:                        #11111a;
+
+$darkFontColor:                      $bgColorDark;
+$lightFontColor:                     #ffffff;
+
+$primaryFont:                        "Europa Regular", sans-serif;
+$secondaryFont:                      "Times New Roman", serif;
+
+$fontSize:                           14px;
+$fontSizeParagraph:                  $fontSize*1.15;
+$fontSizeStatement:                  $fontSize*1.85;
+$fontSizeHero:                       $fontSize*3;
+$fontSizeCaption:                    $fontSize*.8;
+
+$lineHeight:                         16px;
+$lineHeightParagraph:                $lineHeight*1.25;
+$lineHeightStatement:                $lineHeight*1.95;
+$lineHeightHero:                     $lineHeight*3.25;
+$lineHeightCaption:                  $lineHeight*.8;
+
+$captionHeight:                      $buffer*8;
+$menuHeight:                         50vh;
+$menuWidth:                          30vw;
+$menuWidthMobile:                    90vw;
+$menuWidthMd:                        50vw;
+
+$timing:                             .25s;
+$easingCubic:                        cubic-bezier(0.77, 0, 0.175, 1);
+$easingRegular:                      ease-in-out;
+$transitionCubic:                    all $timing $easingCubic;
+$transitionRegular:                  all $timing $easingRegular;
+
+$delay1:                             .25s;
+$delay2:                             $delay1+$delay1;
+$delay3:                             $delay1+$delay2;
+$delay4:                             $delay1+$delay3;
+$delay5:                             $delay1+$delay4;
+$delay6:                             $delay1+$delay5;
+$delay7:                             $delay1+$delay6;
+$delay8:                             $delay1+$delay7;
+
+$xs:                                 600px;
+$sm:                                 960px;
+$md:                                 1280px;
+$lg:                                 1920px;
+
+$zIndex1:                            1;
+$zIndex2:                            2;
+$zIndex3:                            3;
