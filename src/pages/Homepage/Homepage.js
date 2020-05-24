@@ -24,7 +24,7 @@ class Homepage extends Component {
   render() {
     return (
       <Grid container className="homepage">
-        <Grid item xs={12} sm={4} className="title">Taylor Zanke Office</Grid>
+        <Grid item xs={12} sm={4} className="spacer"/>
         <Grid item xs={12} sm={8} md={6} lg={5} xl={4} className="description">
           <div className="header">Introduction</div>
           <p>Taylor Zanke Office is the independent design practice of artist <a href="http://taylorzanke.com">Taylor Zanke</a>. The practice is interested in developing collaborations and partnerships with individuals or institutions to communicate, define, and present ideas, stories, and values. A focus on engaging in contemporary visual culture encourages broad consideration of the media and format of communication, helping to develop ways of meeting an audience that are unexpected. Taylor has a particular interest in the process of designing and its potential to provide a reflective context for all stakeholders by helping to translate sensibilities and concepts into form.</p>
@@ -39,11 +39,6 @@ class Homepage extends Component {
             <li>Brand strategy and research</li>
             <li>Creative direction and art direction</li>
           </ul>
-          <ul>
-            <p>Extended</p>
-            <li>Back-end website development</li>
-            <li>Content strategy, writing, and development</li>
-          </ul>
           <div className="header">Clients, projects, and collaborations</div>
           <ul>
             {PARTNERSHIPS
@@ -52,9 +47,6 @@ class Homepage extends Component {
               <li>{p.partnerName}</li>
             )}
           </ul>
-          <div className="header">Contact</div>
-          <p>Taylor Zanke<br/>Los Angeles, CA</p>
-          <p>taylor@taylorzankeoffice.com<br/>+ 1 917 826 7277</p>
         </Grid>
       </Grid>
     );

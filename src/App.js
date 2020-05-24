@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
 import { CSSTransition, TransitionGroup, Transition } from 'react-transition-group';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+import Nav from './components/Nav/Nav'
 import './styles/styles.scss';
 import Home from './pages/Homepage/Homepage';
+import Contact from './pages/Contact/Contact';
 import './App.css';
 
 const routes = [
-  { path: '/', name: 'Home', Component: Home }
+  { path: '/', name: 'Home', Component: Home },
+  { path: '/contact', name: 'Contact', Component: Contact }
 ]
 
 class App extends Component {
@@ -17,29 +20,30 @@ class App extends Component {
 
       <Router>
           <ScrollToTop/>
+          <Nav/>
           <Route render={({location}) => {
             const { key } = location
             return (
               <>
               <TransitionGroup component={null}>
-              <CSSTransition
-                key={key}
-                appear={true}
-                classNames="my-node"
-                timeout={{enter: 250, exit: 250}}
-              >
-              <Switch location={location}>
-                {routes.map(({ path, Component }) => (
-                  <Route key={path} exact path={path}>
-                    {({ match }) => (
-                        <div className="my-node">
-                          <Component />
-                        </div>
-                    )}
-                  </Route>
-                ))}
-              </Switch>
-              </CSSTransition>
+                <CSSTransition
+                  key={key}
+                  appear={true}
+                  classNames="my-node"
+                  timeout={{enter: 500, exit: 500}}
+                >
+                  <Switch location={location}>
+                    {routes.map(({ path, Component }) => (
+                      <Route key={path} exact path={path}>
+                        {({ match }) => (
+                            <div className="my-node">
+                              <Component />
+                            </div>
+                        )}
+                      </Route>
+                    ))}
+                  </Switch>
+                </CSSTransition>
               </TransitionGroup>
               </>
             )
