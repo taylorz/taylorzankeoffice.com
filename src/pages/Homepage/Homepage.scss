@@ -7,12 +7,12 @@
   color: $darkFontColor;
   .title {
     opacity: 0;
-    @include animation(.5s, $easingRegular, $delay1, fadeIn);
+    @include animation($timing, $easingRegular, $delay1, fadeIn);
     margin-bottom: $lineHeightParagraph*3;
   }
   .description {
     opacity: 0;
-    @include animation(.5s, $easingRegular, $delay2, fadeIn);
+    @include animation($timing, $easingRegular, $delay2, fadeIn);
     font-family: $secondaryFont;
     .header {
       &:first-child {
@@ -28,7 +28,14 @@
       margin: 0;
       padding: 0;
       color: $mediumFontColor;
-      li {}
+      margin-bottom: $lineHeightParagraph;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      li {
+        padding-left: $lineHeightParagraph*3;
+        text-indent:-$lineHeightParagraph*3;
+      }
     }
   }
 }//homepage
