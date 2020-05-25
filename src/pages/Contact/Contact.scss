@@ -6,8 +6,6 @@
   line-height: $lineHeightParagraph;
   color: $darkFontColor;
   .description {
-    // opacity: 0;
-    // @include animation($timing, $easingRegular, $delay2, fadeIn);
     font-family: $secondaryFont;
     .header {
       &:first-child {

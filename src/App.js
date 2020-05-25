@@ -25,26 +25,26 @@ class App extends Component {
             const { key } = location
             return (
               <>
-              <TransitionGroup component={null}>
-                <CSSTransition
-                  key={key}
-                  appear={true}
-                  classNames="my-node"
-                  timeout={{enter: 500, exit: 500}}
-                >
-                  <Switch location={location}>
-                    {routes.map(({ path, Component }) => (
-                      <Route key={path} exact path={path}>
-                        {({ match }) => (
+                <TransitionGroup component={null}>
+                  <CSSTransition
+                    key={key}
+                    appear={true}
+                    classNames="my-node"
+                    timeout={{enter: 1500, exit: 500}}
+                  >
+                    <Switch location={location}>
+                      {routes.map(({ path, Component }) => (
+                        <Route key={path} exact path={path}>
+                          {({ match }) => (
                             <div className="my-node">
                               <Component />
                             </div>
-                        )}
-                      </Route>
-                    ))}
-                  </Switch>
-                </CSSTransition>
-              </TransitionGroup>
+                          )}
+                        </Route>
+                      ))}
+                    </Switch>
+                  </CSSTransition>
+                </TransitionGroup>
               </>
             )
           }}/>
