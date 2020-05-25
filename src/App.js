@@ -30,7 +30,7 @@ class App extends Component {
                     key={key}
                     appear={true}
                     classNames="my-node"
-                    timeout={{enter: 1500, exit: 500}}
+                    timeout={{enter: 1000, exit: 500}}
                   >
                     <Switch location={location}>
                       {routes.map(({ path, Component }) => (

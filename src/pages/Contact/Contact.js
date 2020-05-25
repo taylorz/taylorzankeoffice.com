@@ -12,6 +12,9 @@ class Contact extends Component {
           <Grid item xs={12} sm={8} md={6} lg={5} xl={4} className="description">
             <p>Taylor Zanke<br/>Los Angeles, CA</p>
             <p>taylor@taylorzankeoffice.com<br/>+ 1 917 826 7277</p>
+            <Grid item container xs={12} sm={8} lg={6}>
+              <p>Please send me an email to start or discuss a new project or collaboration.</p>
+            </Grid>
           </Grid>
         </Grid>
       </PageContainer>
