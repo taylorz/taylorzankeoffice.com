@@ -23,6 +23,12 @@ const PARTNERSHIPS = [
   {
     partnerName: "Columbia GSAPP Visual Resources Collection"
   },
+  {
+    partnerName: "Speedboat Projects"
+  },
+  {
+    partnerName: "Hatchet Design and Build"
+  },
 ]
 
 export default PARTNERSHIPS

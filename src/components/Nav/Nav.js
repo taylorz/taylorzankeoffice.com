@@ -3,23 +3,18 @@ import { BrowserRouter as Router, Route, Link, NavLink} from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
 import './Nav.scss';
 
-class Nav extends Component {
-  render() {
-    const {  } = this.props
-    return (
-      <nav className={`nav-container`}>
-        <Grid container className="nav-contents">
-          <Grid item xs={6} sm={4} className="logotype"><NavLink exact to="/">Taylor Zanke Office</NavLink></Grid>
-          <Grid item xs={6} sm={4} className="nav-items">
-            <ul>
-              <li><NavLink exact to="/" className="page-link" activeClassName="page-link-active">About</NavLink></li>
-              <li><NavLink to="/contact" className="page-link" activeClassName="page-link-active">Contact</NavLink></li>
-            </ul>
-          </Grid>
-        </Grid>
-      </nav>
-    );
-  }
-}
+const Nav = () => (
+  <nav className={`nav-container`}>
+    <Grid container className="nav-contents">
+      <Grid item xs={6} sm={4} className="logotype"><NavLink exact to="/">Taylor Zanke Office</NavLink></Grid>
+      <Grid item xs={6} sm={4} className="nav-items">
+        <ul>
+          <li><NavLink exact to="/" className="page-link" activeClassName="page-link-active">About</NavLink></li>
+          <li><NavLink to="/contact" className="page-link" activeClassName="page-link-active">Contact</NavLink></li>
+        </ul>
+      </Grid>
+    </Grid>
+  </nav>
+) 
 
 export default Nav;

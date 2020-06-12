@@ -1,7 +1,7 @@
 @import "../../styles/styles.scss";
 
 .homepage {
-  padding: $buffer*4;
+  padding: $lineHeightParagraph $buffer*4;
   font-size: $fontSizeParagraph;
   line-height: $lineHeightParagraph;
   color: $darkFontColor;
@@ -21,10 +21,7 @@
       margin: 0;
       padding: 0;
       color: $mediumFontColor;
-      margin-bottom: $lineHeightParagraph;
-      &:last-child {
-        margin-bottom: 0;
-      }
+      margin-bottom: $lineHeightParagraph*3;
       li {
         padding-left: $lineHeightParagraph*3;
         text-indent:-$lineHeightParagraph*3;
