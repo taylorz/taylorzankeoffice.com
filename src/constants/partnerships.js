@@ -29,6 +29,9 @@ const PARTNERSHIPS = [
   {
     partnerName: "Hatchet Design and Build"
   },
+  {
+    partnerName: "Little Universe"
+  },
 ]
 
 export default PARTNERSHIPS
