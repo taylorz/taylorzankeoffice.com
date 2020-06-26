@@ -30,7 +30,11 @@ const PARTNERSHIPS = [
     partnerName: "Hatchet Design and Build"
   },
   {
+    
     partnerName: "Little Universe"
+  },
+  {
+    partnerName: "Adrian Del Balso"
   },
 ]
 
