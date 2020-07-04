@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import './Slideshow.scss';
-import TestImage from '../../assets/images/test.jpg'
+import TestImage from '../../assets/images/test.png'
 import TestImage2 from '../../assets/images/test1.png'
  
 const fadeImages = [
@@ -19,17 +19,32 @@ const fadeImages = [
     caption: "this one was too"
   }
 ];
+
+const NextArrow = ({ onClick }) => (
+  <div 
+    onClick={onClick}
+    className="next-arrow"
+    
+  />
+)
+const PrevArrow = ({ onClick }) => (
+  <div
+    onClick={onClick}
+    className="prev-arrow"
+  />
+)
  
 const sliderProps = {
     dots: false,
-    infinite: false,
+    infinite: true,
     fade: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true
+    nextArrow: <NextArrow/>,
+    prevArrow: <PrevArrow/>
 }
- 
+
 const Slideshow = ({ noMatte }) => (
     <Grid container className="slideshow">
       <Grid item xs={12}>

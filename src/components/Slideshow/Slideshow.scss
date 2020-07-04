@@ -39,4 +39,38 @@
             font-family: $secondaryFont;
         }
     }
+    .prev-arrow {
+        position: absolute;
+        top: 0;
+        display: flex;
+        width: 50%;
+        height: calc(100% - #{$buffer*8});
+        // background: red;
+        // opacity: .25;
+        z-index: 1;
+        left: 0;
+        &:hover {
+            cursor: url('../../assets/icons/arrow-left.svg') 50 30, e-resize;
+        }
+        &::before {
+            display: none;
+        }
+    }
+    .next-arrow {
+        position: absolute;
+        top: 0;
+        display: flex;
+        width: 50%;
+        height: calc(100% - #{$buffer*8});
+        // background: blue;
+        // opacity: .25;
+        z-index: 1;
+        right: 0;
+        &:hover {
+            cursor: url('../../assets/icons/arrow-right.svg') 50 30, e-resize;
+        }
+        &::before {
+            display: none;
+        }
+    }
 }//slideshow
