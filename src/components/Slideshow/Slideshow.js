@@ -1,8 +1,9 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { Fade } from 'react-slideshow-image';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import './Slideshow.scss';
-
 import TestImage from '../../assets/images/test.jpg'
 import TestImage2 from '../../assets/images/test1.png'
  
@@ -19,22 +20,20 @@ const fadeImages = [
   }
 ];
  
-const fadeProperties = {
-  duration: 1000,
-  transitionDuration: 500,
-  infinite: true,
-  indicators: false,
-  autoplay: false,
-  arrows: false,
-  // onChange: (oldIndex, newIndex) => {
-  //   console.log(`fade transition from ${oldIndex} to ${newIndex}`);
-  // }
+const sliderProps = {
+    dots: false,
+    infinite: false,
+    fade: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true
 }
  
 const Slideshow = ({ noMatte }) => (
     <Grid container className="slideshow">
       <Grid item xs={12}>
-        <Fade {...fadeProperties}>
+        <Slider {...sliderProps}>
           {fadeImages.map((i) => 
             <Grid container className="slide-item">
               <Grid item container xs={12} className="image-block" justify="center" alignItems="center">
@@ -47,7 +46,7 @@ const Slideshow = ({ noMatte }) => (
               </Grid>
             </Grid>
           )}
-        </Fade>
+        </Slider>
       </Grid>
     </Grid>
 )

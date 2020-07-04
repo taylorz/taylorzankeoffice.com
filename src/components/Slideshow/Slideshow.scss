@@ -3,6 +3,7 @@
 .slideshow {
     .slide-item {
         height: calc(100vh - #{$navHeight} - #{$buffer*4});
+        outline: none;
         width: 100%;
         background: #f1f1f1;
         .image-block {
