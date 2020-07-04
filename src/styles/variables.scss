@@ -1,4 +1,4 @@
-$buffer:                            4px;
+$buffer:                             4px;
 
 $bgBody:                             #ffffff;
 $bgColorLight:                       #f1f1f1;
@@ -23,11 +23,7 @@ $lineHeightStatement:                $lineHeight*1.95;
 $lineHeightHero:                     $lineHeight*3.25;
 $lineHeightCaption:                  $lineHeight*.8;
 
-$captionHeight:                      $buffer*8;
-$menuHeight:                         50vh;
-$menuWidth:                          30vw;
-$menuWidthMobile:                    90vw;
-$menuWidthMd:                        50vw;
+$navHeight:                          $lineHeight*3;
 
 $timing:                             .5s;
 $easingCubic:                        cubic-bezier(0.77, 0, 0.175, 1);

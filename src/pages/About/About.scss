@@ -1,0 +1,30 @@
+@import "../../styles/styles.scss";
+
+.about {
+  font-size: $fontSizeParagraph;
+  line-height: $lineHeightParagraph;
+  color: $darkFontColor;
+  .description {
+    font-family: $secondaryFont;
+    .header {
+      &:first-child {
+        margin-top: 0;
+      }
+      margin: $lineHeightParagraph*3 0 $lineHeightParagraph 0;
+    }
+    p {
+      margin-top: 0;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      color: $mediumFontColor;
+      margin-bottom: $lineHeightParagraph*3;
+      li {
+        padding-left: $lineHeightParagraph*3;
+        text-indent:-$lineHeightParagraph*3;
+      }
+    }
+  }
+}//homepage

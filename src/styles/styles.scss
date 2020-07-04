@@ -24,7 +24,8 @@
 body {
   margin: 0; padding: 0;
   font-family: $primaryFont;
-  font-size: $fontSize;
+  font-size: $fontSizeParagraph;
+  line-height: $lineHeightParagraph;
   line-height: $lineHeight;
   color: $darkFontColor;
   -webkit-font-smoothing: antialiased;

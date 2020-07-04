@@ -5,11 +5,13 @@ import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Nav from './components/Nav/Nav'
 import './styles/styles.scss';
 import Home from './pages/Homepage/Homepage';
+import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import './App.css';
 
 const routes = [
   { path: '/', name: 'Home', Component: Home },
+  { path: '/about', name: 'About', Component: About },
   { path: '/contact', name: 'Contact', Component: Contact }
 ]
 
