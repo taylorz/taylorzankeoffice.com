@@ -28,7 +28,7 @@
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center;
-                    @include breakpoint(xs) {
+                    @include breakpoint(sm) {
                         background-size: contain;
                     }
                 }
@@ -59,7 +59,7 @@
             width: 100%;
             background: white;
             padding: $buffer*4 0 0 0;
-            @include breakpoint(xs) {
+            @include breakpoint(sm) {
                 display: none;
             }
             .project-desc {

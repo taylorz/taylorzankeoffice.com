@@ -18,7 +18,7 @@ const PARTNERSHIPS = [
     partnerName: "Elizabeth Roberts Architects"
   },
   {
-    partnerName: "Studio-X Shenzhen"
+    partnerName: "Studio-X Beijing"
   },
   {
     partnerName: "Columbia GSAPP Visual Resources Collection"

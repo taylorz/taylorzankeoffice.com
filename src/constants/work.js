@@ -6,7 +6,7 @@ const WORK = [
   {
     id: 1,
     image: image1,
-    client: "Studio-X Shenzhen",
+    client: "Studio-X Beijing",
     projectName: "Housing the Majority",
     caption: "Scanned spatial surveys are placed in a spread, revealing scales of detail.",
     year: "2016",
@@ -17,7 +17,7 @@ const WORK = [
   {
     id: 2,
     image: image2,
-    client: "Studio-X Shenzhen",
+    client: "Studio-X Beijing",
     projectName: "Housing the Majority",
     caption: "Notes and diagrams are presented together, a working process is revealed.",
     year: "2016",
@@ -28,7 +28,7 @@ const WORK = [
   {
     id: 3,
     image: image3,
-    client: "Studio-X Shenzhen",
+    client: "Studio-X Beijing",
     projectName: "Housing the Majority",
     caption: "Book cover, and a poster printed on-site.",
     year: "2016",
