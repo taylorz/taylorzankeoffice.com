@@ -18,16 +18,19 @@
             height: 100%;
             width: 100%;
             .block-item {
-                    width: 100%;
-                    max-height: calc(100% - #{$buffer*8});
-                    height: auto;
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
+                width: 100%;
+                max-height: calc(100% - #{$buffer*8});
+                height: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
                 &.image-item {
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center;
+                    @include breakpoint(xs) {
+                        background-size: contain;
+                    }
                 }
                 &.info-item {
                     .info-container {
@@ -51,7 +54,9 @@
             width: 100%;
             background: white;
             padding: $buffer*4 0 0 0;
-            @include transition;
+            @include breakpoint(xs) {
+                display: none;
+            }
             .project-desc {
                 text-align: center;
             }
