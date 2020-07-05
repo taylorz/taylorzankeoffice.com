@@ -43,6 +43,11 @@
                             padding: 0;
                             li {
                             }
+                            &.credits {
+                                li {
+                                    color: $mediumFontColor;
+                                }
+                            }
                         }
                     }
                 }
