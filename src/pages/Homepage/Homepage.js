@@ -6,6 +6,7 @@ import PageContainer from '../../components/PageContainer/PageContainer'
 import Slideshow from '../../components/Slideshow/Slideshow'
 
 import PARTNERSHIPS from '../../constants/partnerships'
+import WORK from '../../constants/work'
 
 function dynamicSort(property) {
     var sortOrder = 1;
@@ -27,7 +28,7 @@ const Homepage = () => (
     <Grid container>
       <Grid item xs={12} sm={4} className="spacer"/>
       <Grid item xs={12} sm={8} className="slideshow">
-        <Slideshow/>
+        <Slideshow work={WORK}/>
       </Grid>
     </Grid>
   </PageContainer>
