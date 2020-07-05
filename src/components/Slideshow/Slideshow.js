@@ -82,7 +82,9 @@ const Slideshow = ({ work }) => {
                 <Grid item container xs={2} sm={1} justify="flex-start">{w.id}/{work.length}</Grid>
                 <Grid item container className="project-desc" xs={8} sm={10} justify="center">{w.caption}</Grid>
                 <Grid item container xs={2} sm={1} justify="flex-end">
-                    <div className="info-toggler" onClick={() => setInfoIsVisible(!infoIsVisible)}>{infoIsVisible ? "Images" : "Info"}</div>
+                    <div className="info-toggler" onClick={() => setInfoIsVisible(!infoIsVisible)}>
+                      {infoIsVisible ? "Images" : "Info"}
+                    </div>
                 </Grid>
               </Grid>
             </Grid>
