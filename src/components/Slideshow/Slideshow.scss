@@ -59,7 +59,7 @@
             width: 100%;
             background: white;
             padding: $buffer*4 0 0 0;
-            @include breakpoint(sm) {
+            @include breakpoint(xs) {
                 display: none;
             }
             .project-desc {

@@ -26,7 +26,6 @@ const sliderProps = {
     infinite: true,
     fade: true,
     speed: 500,
-    slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <NextArrow/>,
     prevArrow: <PrevArrow/>
@@ -50,7 +49,7 @@ const Slideshow = ({ work }) => {
                 >
                   <div className="block-item info-item">
                     <Grid container className="info-container" justify="flex-start" alignItems="flex-start">
-                      <Grid item xs={12} lg={6}>
+                      <Grid item xs={12} sm={8}>
                         <ul>
                           <li>{w.projectName}, {w.year}</li>
                           <li>{w.client}</li>
@@ -78,9 +77,31 @@ const Slideshow = ({ work }) => {
                   <div className="block-item image-item" style={{backgroundImage: `url(${w.image})`}}/>
                 </CSSTransition>
               </Grid>
-              <Grid container className="slide-item-caption" justify="space-between">
-                <Grid item container xs={2} sm={1} justify="flex-start">{w.id}/{work.length}</Grid>
-                <Grid item container className="project-desc" xs={8} sm={10} justify="center">{w.caption}</Grid>
+              <Grid container className="slide-item-caption" justify="space-between" alignItems="flex-end">
+                <Grid item container xs={2} sm={1} justify="flex-start">
+                  <CSSTransition
+                    in={!infoIsVisible}
+                    timeout={{enter: 1000, exit: 500}}
+                    classNames="my-node"
+                    unmountOnExit
+                    onEnter={() => setInfoIsVisible(false)}
+                    onExited={() => setInfoIsVisible(true)}
+                  >
+                    <span>{w.id}/{work.length}</span>
+                  </CSSTransition>
+                </Grid>
+                <Grid item container className="project-desc" xs={8} sm={10} justify="center">
+                  <CSSTransition
+                      in={!infoIsVisible}
+                      timeout={{enter: 1000, exit: 500}}
+                      classNames="my-node"
+                      unmountOnExit
+                      onEnter={() => setInfoIsVisible(false)}
+                      onExited={() => setInfoIsVisible(true)}
+                    >
+                      <span>{w.caption}</span>
+                  </CSSTransition>
+                </Grid>
                 <Grid item container xs={2} sm={1} justify="flex-end">
                     <div className="info-toggler" onClick={() => setInfoIsVisible(!infoIsVisible)}>
                       {infoIsVisible ? "Images" : "Info"}

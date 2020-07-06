@@ -26,8 +26,8 @@ function dynamicSort(property) {
 const Homepage = () => (
   <PageContainer className="homepage">
     <Grid container>
-      <Grid item xs={12} sm={4} className="spacer"/>
-      <Grid item xs={12} sm={8} className="slideshow">
+      <Grid item xs={12} md={4} className="spacer"/>
+      <Grid item xs={12} md={8} className="slideshow">
         <Slideshow work={WORK}/>
       </Grid>
     </Grid>
