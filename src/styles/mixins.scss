@@ -9,18 +9,15 @@
 }
 @mixin breakpoint($class) {
   @if $class == xs {
-    @media (max-width: 599px) { @content; }
+    @media (max-width: 600px) { @content; }
   }
   @else if $class == sm {
-    @media (max-width: 959px) { @content; }
-  }
-  @else if $class == md {
     @media (max-width: 960px) { @content; }
   }
-  @else if $class == lg {
-    @media (max-width: 1279px) { @content; }
+  @else if $class == md {
+    @media (max-width: 1280px) { @content; }
   }
-  @else if $class == xl {
+  @else if $class == lg {
     @media (max-width: 1920px) { @content; }
   }
   @else {

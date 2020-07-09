@@ -49,7 +49,7 @@ const Slideshow = ({ work }) => {
                 >
                   <div className="block-item info-item">
                     <Grid container className="info-container" justify="flex-start" alignItems="flex-start">
-                      <Grid item xs={12} sm={8}>
+                      <Grid item xs={12} sm={8} md={6}>
                         <ul>
                           <li>{w.projectName}, {w.year}</li>
                           <li>{w.client}</li>
