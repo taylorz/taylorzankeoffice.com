@@ -69,20 +69,22 @@
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                .caption-item {
-                    &.caption-count {
-                        @include breakpoint(xs) {
-                            margin-bottom: $lineHeightParagraph;
+                .caption-wrapper {
+                    .caption-item {
+                        &.caption-count {
+                            @include breakpoint(xs) {
+                                margin-bottom: $lineHeightParagraph;
+                            }
                         }
-                    }
-                    &.caption-description {
-                        text-align: center;
-                    }
-                    span {
-                        width: 100%;
-                        @include breakpoint(xs) {
-                            line-height: $lineHeightParagraph;
-                            text-align: left;
+                        &.caption-description {
+                            text-align: center;
+                        }
+                        span {
+                            width: 100%;
+                            @include breakpoint(xs) {
+                                line-height: $lineHeightParagraph;
+                                text-align: left;
+                            }
                         }
                     }
                 }
@@ -95,8 +97,6 @@
         display: flex;
         width: 50%;
         height: calc(100% - #{$buffer*8});
-        // background: red;
-        // opacity: .25;
         z-index: 1;
         left: 0;
         &:hover {
@@ -112,8 +112,6 @@
         display: flex;
         width: 50%;
         height: calc(100% - #{$buffer*8});
-        // background: blue;
-        // opacity: .25;
         z-index: 1;
         right: 0;
         &:hover {
