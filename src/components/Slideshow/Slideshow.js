@@ -64,17 +64,6 @@ const Slideshow = ({ work }) => {
                           <li>{c}</li>
                           )}
                         </ul>
-                        <ul className="credits">
-                          {w.credits.map((c) =>
-                          <li>{c}</li>
-                          )}
-                        </ul>
-                        <ul className="credits">
-                          {w.credits.map((c) =>
-                          <li>{c}</li>
-                          )}
-                        </ul>
-
                       </Grid>
                       </section>
                     </CSSTransition>
