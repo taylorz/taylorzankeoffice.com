@@ -33,23 +33,25 @@ const sliderProps = {
 const Slideshow = ({ work }) => {
     const [infoIsVisible, setInfoIsVisible] = useState(false);
     return (
-    <Grid container className={`slideshow ${infoIsVisible && "info-is-visible"}`}>
-      <Grid item xs={12}>
-        <Slider {...sliderProps}>
-          {work.map((w) => 
-            <Grid container className="slide-item">
-              <Grid item container xs={12} className="image-block" justify="center" alignItems="center">
-                <CSSTransition
-                  in={infoIsVisible}
-                  timeout={{enter: 1000, exit: 500}}
-                  classNames="my-node"
-                  unmountOnExit
-                  onEnter={() => setInfoIsVisible(true)}
-                  onExited={() => setInfoIsVisible(false)}
-                >
-                  <div className="block-item info-item">
-                    <Grid container className="info-container" justify="flex-start" alignItems="flex-start">
-                      <Grid item xs={12} sm={8} md={6}>
+      <>
+        <div className="info-toggler" onClick={() => setInfoIsVisible(!infoIsVisible)}>
+          {infoIsVisible ? "Images" : "Info"}
+        </div>
+          <Grid container className={`slideshow ${infoIsVisible && "info-is-visible"}`}>
+            <Grid item xs={12}>
+              <Slider {...sliderProps}>
+                  {work.map((w) => 
+                  <Grid container className="slide-wrapper">
+                    <CSSTransition
+                      in={infoIsVisible}
+                      timeout={{enter: 1000, exit: 500}}
+                      classNames="my-node"
+                      unmountOnExit
+                      onEnter={() => setInfoIsVisible(true)}
+                      onExited={() => setInfoIsVisible(false)}
+                    >
+                      <section className="slide-section section-info">
+                      <Grid item  xs={12} sm={8}>
                         <ul>
                           <li>{w.projectName}, {w.year}</li>
                           <li>{w.client}</li>
@@ -62,35 +64,36 @@ const Slideshow = ({ work }) => {
                           <li>{c}</li>
                           )}
                         </ul>
+                        <ul className="credits">
+                          {w.credits.map((c) =>
+                          <li>{c}</li>
+                          )}
+                        </ul>
+                        <ul className="credits">
+                          {w.credits.map((c) =>
+                          <li>{c}</li>
+                          )}
+                        </ul>
+
                       </Grid>
-                    </Grid>
-                  </div>
-                </CSSTransition>
-                <CSSTransition
-                  in={!infoIsVisible}
-                  timeout={{enter: 1000, exit: 500}}
-                  classNames="my-node"
-                  unmountOnExit
-                  onEnter={() => setInfoIsVisible(false)}
-                  onExited={() => setInfoIsVisible(true)}
-                >
-                  <div className="block-item image-item" style={{backgroundImage: `url(${w.image})`}}/>
-                </CSSTransition>
-              </Grid>
-              <Grid container className="slide-item-caption" justify="space-between" alignItems="flex-end">
-                <Grid item container xs={2} sm={1} justify="flex-start">
-                  <CSSTransition
-                    in={!infoIsVisible}
-                    timeout={{enter: 1000, exit: 500}}
-                    classNames="my-node"
-                    unmountOnExit
-                    onEnter={() => setInfoIsVisible(false)}
-                    onExited={() => setInfoIsVisible(true)}
-                  >
-                    <span>{w.id}/{work.length}</span>
+                      </section>
+                    </CSSTransition>
+
+
+                    <CSSTransition
+                      in={!infoIsVisible}
+                      timeout={{enter: 1000, exit: 500}}
+                      classNames="my-node"
+                      unmountOnExit
+                      onEnter={() => setInfoIsVisible(false)}
+                      onExited={() => setInfoIsVisible(true)}
+                    >
+                    <section className="slide-section section-image">
+                      <Grid item container xs={12} className="image-block" justify="center" alignItems="center">
+                        <div className="block-item image-item" style={{backgroundImage: `url(${w.image})`}}/>
+                      </Grid>
+                    </section>
                   </CSSTransition>
-                </Grid>
-                <Grid item container className="project-desc" xs={8} sm={10} justify="center">
                   <CSSTransition
                       in={!infoIsVisible}
                       timeout={{enter: 1000, exit: 500}}
@@ -99,20 +102,24 @@ const Slideshow = ({ work }) => {
                       onEnter={() => setInfoIsVisible(false)}
                       onExited={() => setInfoIsVisible(true)}
                     >
-                      <span>{w.caption}</span>
-                  </CSSTransition>
-                </Grid>
-                <Grid item container xs={2} sm={1} justify="flex-end">
-                    <div className="info-toggler" onClick={() => setInfoIsVisible(!infoIsVisible)}>
-                      {infoIsVisible ? "Images" : "Info"}
-                    </div>
-                </Grid>
-              </Grid>
-            </Grid>
-          )}
+                      <section className="slide-section section-caption">
+                        <Grid container className="caption-wrapper" alignItems="flex-end">
+                          <Grid item container className="caption-item caption-count" xs={12} sm={1} justify="flex-start">
+                            <span>{w.id}/{work.length}</span>
+                          </Grid>
+                          <Grid item container className="caption-item caption-description" xs={10} sm={10} justify="center">
+                            <span>{w.caption}</span>
+                          </Grid>
+                          <Grid item container className="caption-item caption-spacer" xs={4} sm={1} justify="flex-end"/>
+                        </Grid>
+                      </section>
+                    </CSSTransition>
+                  </Grid>
+            )}
         </Slider>
       </Grid>
     </Grid>
+    </>
     )
 }
 

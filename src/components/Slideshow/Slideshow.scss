@@ -1,5 +1,20 @@
 @import "../../styles/styles.scss";
 
+.info-toggler {
+        position: fixed;
+        bottom: 0; right: 0;
+        padding: $buffer*4;
+        font-family: $secondaryFont;
+        color: $mediumFontColor;
+        z-index: 100;
+        @include breakpoint(xs) {
+            line-height: $lineHeightParagraph;
+            text-align: center;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
 .slideshow {
     font-family: $secondaryFont;
     &.info-is-visible {
@@ -10,72 +25,72 @@
             display: none !important;
         }
     }
-    .slide-item {
+    .slide-wrapper {
         height: calc(100vh - #{$navHeight} - #{$buffer*5});
         outline: none;
         width: 100%;
-        .image-block {
-            height: 100%;
-            width: 100%;
-            .block-item {
-                width: 100%;
-                max-height: calc(100% - #{$buffer*8});
-                height: auto;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                &.image-item {
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    @include breakpoint(md) {
-                        background-size: contain;
+        // background: red;
+        .slide-section {
+            &.section-info {
+                line-height: $lineHeightParagraph;
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                    }
+                    &.credits {
+                        li {
+                            color: $mediumFontColor;
+                        }
                     }
                 }
-                &.info-item {
-                    .info-container {
+            }//section-info
+            &.section-image {
+                .image-block {
+                    height: 100%;
+                    width: 100%;
+                    .block-item {
                         width: 100%;
-                        height: 100%;
-                        line-height: $lineHeightParagraph;
-                        ul {
-                            list-style-type: none;
-                            margin: 0;
-                            padding: 0;
-                            li {
+                        max-height: calc(100vh - #{$navHeight} - #{$buffer*12});
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        &.image-item {
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            @include breakpoint(md) {
+                                background-size: contain;
                             }
-                            &.credits {
-                                li {
-                                    color: $mediumFontColor;
-                                }
-                            }
+                        }
+                    }
+                }//image-block
+            }//section-image
+            &.section-caption {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                .caption-item {
+                    &.caption-count {
+                        @include breakpoint(xs) {
+                            margin-bottom: $lineHeightParagraph;
+                        }
+                    }
+                    &.caption-description {
+                        text-align: center;
+                    }
+                    span {
+                        width: 100%;
+                        @include breakpoint(xs) {
+                            line-height: $lineHeightParagraph;
+                            text-align: left;
                         }
                     }
                 }
             }
         }
-        .slide-item-caption {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background: white;
-            padding: $buffer*4 0 0 0;
-            @include breakpoint(xs) {
-                display: none;
-            }
-            @include breakpoint(md) {
-                font-size: $fontSize;
-            }
-            .project-desc {
-                text-align: center;
-            }
-            .info-toggler {
-                color: $mediumFontColor;
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-        }
-    }
+    }//slide-wrapper
     .prev-arrow {
         position: absolute;
         top: 0;
