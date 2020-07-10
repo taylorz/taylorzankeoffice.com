@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import './Slideshow.scss';
 import { CSSTransition } from 'react-transition-group';
 
-
 const NextArrow = ({ onClick }) => (
   <div 
     onClick={onClick}
@@ -51,20 +50,20 @@ const Slideshow = ({ work }) => {
                       onExited={() => setInfoIsVisible(false)}
                     >
                       <section className="slide-section section-info">
-                      <Grid item  xs={12} sm={8}>
-                        <ul>
-                          <li>{w.projectName}, {w.year}</li>
-                          <li>{w.client}</li>
-                        </ul>
-                        <p>{w.deliverable}</p>
-                        <p>{w.info}</p>
-                        <p>Featuring work by</p>
-                        <ul className="credits">
-                          {w.credits.map((c) =>
-                          <li>{c}</li>
-                          )}
-                        </ul>
-                      </Grid>
+                        <Grid item xs={12} sm={8}>
+                          <ul>
+                            <li>{w.projectName}, {w.year}</li>
+                            <li>{w.client}</li>
+                          </ul>
+                          <p>{w.deliverable}</p>
+                          <p>{w.info}</p>
+                          <p>Featuring work by</p>
+                          <ul className="credits">
+                            {w.credits.map((c) =>
+                            <li>{c}</li>
+                            )}
+                          </ul>
+                        </Grid>
                       </section>
                     </CSSTransition>
 

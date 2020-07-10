@@ -29,7 +29,6 @@
         height: calc(100vh - #{$navHeight} - #{$buffer*5});
         outline: none;
         width: 100%;
-        // background: red;
         .slide-section {
             &.section-info {
                 line-height: $lineHeightParagraph;
