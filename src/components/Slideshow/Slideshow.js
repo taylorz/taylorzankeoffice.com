@@ -98,7 +98,7 @@ const Slideshow = ({ work }) => {
                           <Grid item container className="caption-item caption-description" xs={10} sm={10} justify="center">
                             <span>{w.caption}</span>
                           </Grid>
-                          <Grid item container className="caption-item caption-spacer" xs={4} sm={1} justify="flex-end"/>
+                          <Grid item container className="caption-item caption-spacer" xs={12} sm={1} justify="flex-end"/>
                         </Grid>
                       </section>
                     </CSSTransition>
