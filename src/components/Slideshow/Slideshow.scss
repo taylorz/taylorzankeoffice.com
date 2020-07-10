@@ -6,10 +6,9 @@
         padding: $buffer*4;
         font-family: $secondaryFont;
         color: $mediumFontColor;
-        z-index: 100;
+        z-index: $zIndex3;
         @include breakpoint(xs) {
             line-height: $lineHeightParagraph;
-            text-align: center;
         }
         &:hover {
             cursor: pointer;
