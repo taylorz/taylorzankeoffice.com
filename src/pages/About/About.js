@@ -34,6 +34,7 @@ const About = () => (
         <ul>
           <li>Website and interface design</li>
           <li>Front-end website development</li>
+          <li>Website content direction and management</li>
           <li>Book, editorial, and publication design</li>
           <li>Creative direction and art direction</li>
           <li>Identity systems and programs</li>
