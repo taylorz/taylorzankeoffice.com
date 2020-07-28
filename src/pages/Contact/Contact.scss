@@ -4,6 +4,7 @@
   font-size: $fontSizeParagraph;
   line-height: $lineHeightParagraph;
   color: $darkFontColor;
+  padding-top: $buffer*2;
   .description {
     font-family: $secondaryFont;
     .header {

@@ -30,6 +30,7 @@
         width: 100%;
         .slide-section {
             &.section-info {
+                padding-top: $buffer*2;
                 line-height: $lineHeightParagraph;
                 ul {
                     list-style-type: none;
