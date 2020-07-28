@@ -3,7 +3,10 @@
 .info-toggler {
         position: fixed;
         bottom: 0; right: 0;
-        padding: $buffer*4;
+        padding: 0 $buffer*4;
+        height: $navHeight;
+        display: flex;
+        align-items: center;
         font-family: $secondaryFont;
         color: $mediumFontColor;
         z-index: $zIndex3;
@@ -25,10 +28,15 @@
         }
     }
     .slide-wrapper {
-        height: calc(100vh - #{$navHeight} - #{$buffer*5});
+        height: calc(100vh - #{$navHeight} - #{$buffer*6});
         outline: none;
         width: 100%;
         .slide-section {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             &.section-info {
                 padding-top: $buffer*2;
                 line-height: $lineHeightParagraph;
@@ -68,7 +76,9 @@
             }//section-image
             &.section-caption {
                 position: absolute;
-                bottom: 0;
+                display: flex;
+                align-items: flex-end;
+                bottom: -$buffer;
                 width: 100%;
                 .caption-wrapper {
                     .caption-item {

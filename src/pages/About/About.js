@@ -32,7 +32,7 @@ const About = () => (
         <div className="header">Capabilities</div>
         <p>This office provides services across numerous media. Capabilities are listed below, and can be extended through a network of close collaborators in order to meet each project’s requirements.</p>
         <ul>
-          <li>Architecturural design and spatial analysis</li>
+          <li>Architectural design and spatial planning</li>
           <li>Real estate and financial analysis</li>
           <li>Book, editorial, and publication design</li>
           <li>Creative direction and art direction</li>
