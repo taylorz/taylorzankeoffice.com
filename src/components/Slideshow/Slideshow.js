@@ -26,6 +26,7 @@ const sliderProps = {
     fade: true,
     speed: 500,
     slidesToScroll: 1,
+    lazyLoad: true,
     nextArrow: <NextArrow/>,
     prevArrow: <PrevArrow/>
 }
@@ -57,12 +58,17 @@ const Slideshow = ({ work }) => {
                           </ul>
                           <p>{w.deliverable}</p>
                           <p>{w.info}</p>
-                          <p>Featuring work by</p>
-                          <ul className="credits">
-                            {w.credits.map((c) =>
-                            <li>{c}</li>
-                            )}
-                          </ul>
+                          {w.credits.length ? 
+                            <>
+                            <p>Featuring work by</p>
+                            <ul className="credits">
+                              {w.credits.map((c) =>
+                              <li>{c}</li>
+                              )}
+                            </ul>
+                            </>
+                            : null
+                          }
                         </Grid>
                       </section>
                     </CSSTransition>
