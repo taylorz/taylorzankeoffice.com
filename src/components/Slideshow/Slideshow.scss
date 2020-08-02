@@ -19,6 +19,7 @@
     }
 .slideshow {
     font-family: $secondaryFont;
+    overflow: visible;
     &.info-is-visible {
         .next-arrow {
             display: none !important;
@@ -28,7 +29,7 @@
         }
     }
     .slide-wrapper {
-        height: calc(100vh - #{$navHeight} - #{$buffer*6});
+        height: calc(100vh - #{$navHeight} - #{$buffer*5});
         outline: none;
         width: 100%;
         .slide-section {
@@ -76,10 +77,11 @@
             }//section-image
             &.section-caption {
                 position: absolute;
+                top: auto;
+                bottom: 0;
                 display: flex;
                 align-items: flex-end;
-                bottom: -$buffer;
-                width: 100%;
+                height: $navHeight;
                 .caption-wrapper {
                     .caption-item {
                         &.caption-count {
