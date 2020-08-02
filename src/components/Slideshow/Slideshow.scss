@@ -19,7 +19,6 @@
     }
 .slideshow {
     font-family: $secondaryFont;
-    overflow: visible;
     &.info-is-visible {
         .next-arrow {
             display: none !important;
@@ -29,7 +28,8 @@
         }
     }
     .slide-wrapper {
-        height: calc(100vh - #{$navHeight} - #{$buffer*5});
+        height: calc(100vh - #{$navHeight} - #{$buffer*1.5});
+        // background: red;
         outline: none;
         width: 100%;
         .slide-section {
@@ -39,8 +39,16 @@
             left: 0;
             right: 0;
             &.section-info {
+                position: absolute;
+                top: 0;
                 padding-top: $buffer*2;
+                padding-bottom: $lineHeightParagraph*4;
                 line-height: $lineHeightParagraph;
+                overflow-y: scroll;
+                z-index: $zIndex3;
+                &::-webkit-scrollbar {
+                    display: none;
+                  }
                 ul {
                     list-style-type: none;
                     margin: 0;
@@ -60,7 +68,7 @@
                     width: 100%;
                     .block-item {
                         width: 100%;
-                        max-height: calc(100vh - #{$navHeight} - #{$buffer*12});
+                        max-height: calc(100vh - #{$navHeight*2});
                         position: absolute;
                         top: 0;
                         bottom: 0;
@@ -80,7 +88,7 @@
                 top: auto;
                 bottom: 0;
                 display: flex;
-                align-items: flex-end;
+                align-items: center;
                 height: $navHeight;
                 .caption-wrapper {
                     .caption-item {

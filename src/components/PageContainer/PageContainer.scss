@@ -2,5 +2,7 @@
 
 .page-container {
   position: absolute;
-  padding: 0 $buffer*4 $buffer*4 $buffer*4;
+  padding: 0 $buffer*4 0 $buffer*4;
+  bottom: 0;
+  top: $navHeight;
 }//page-container

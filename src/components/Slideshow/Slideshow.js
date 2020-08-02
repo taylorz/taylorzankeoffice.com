@@ -50,7 +50,7 @@ const Slideshow = ({ work }) => {
                       onExited={() => setInfoIsVisible(false)}
                     >
                       <section className="slide-section section-info">
-                        <Grid item xs={12} sm={8}>
+                        <Grid item xs={12} sm={8} md={6}>
                           <ul>
                             <li>{w.projectName}, {w.year}</li>
                             <li>{w.client}</li>
