@@ -6,16 +6,16 @@
     height: $navHeight;
     opacity: 0;
     @include animation($timing, $easingRegular, $delay1, fadeIn);
-    @include breakpoint(xs) {
-      height: auto;
-      padding: $buffer*4;
-    }
+    // @include breakpoint(xs) {
+    //   height: auto;
+    //   padding: $buffer*4;
+    // }
     .logotype {
     }
     .nav-items {
-      @include breakpoint(xs) {
-        margin-top: $lineHeightParagraph;
-      }
+      // @include breakpoint(xs) {
+      //   margin-top: $lineHeightParagraph;
+      // }
       ul {
         list-style-type: none;
         padding: 0; margin: 0;
