@@ -27,8 +27,29 @@
             display: none !important;
         }
     }
+    @include breakpoint(xs) {
+        height: 100%;
+    }
+    .slick-slider {
+        @include breakpoint(xs) {
+            height: 100%;
+        }
+        .slick-list {
+            @include breakpoint(xs) {
+                height: 100%;
+            }
+            .slick-track {
+                @include breakpoint(xs) {
+                    height: 100%;
+                }
+            }
+        }
+    }
     .slide-wrapper {
         height: calc(100vh - #{$navHeight} - #{$buffer*1.5});
+        @include breakpoint(xs) {
+            height: 100%;
+        }
         // background: red;
         outline: none;
         width: 100%;
