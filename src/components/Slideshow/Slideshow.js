@@ -10,7 +10,6 @@ const NextArrow = ({ onClick }) => (
   <div 
     onClick={onClick}
     className="next-arrow"
-    
   />
 )
 const PrevArrow = ({ onClick }) => (

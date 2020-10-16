@@ -10,9 +10,8 @@ import Contact from './pages/Contact/Contact';
 import './App.css';
 
 const routes = [
-  { path: '/', name: 'Home', Component: Home },
-  { path: '/about', name: 'About', Component: About },
-  { path: '/contact', name: 'Contact', Component: Contact }
+  { path: '/', name: 'Home', Component: About },
+  // +
 ]
 
 class App extends Component {

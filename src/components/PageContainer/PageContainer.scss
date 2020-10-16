@@ -4,5 +4,6 @@
   position: absolute;
   padding: 0 $buffer*4 0 $buffer*4;
   bottom: 0;
-  top: $navHeight;
+  // top: $navHeight;
+  top: $buffer*4;
 }//page-container
