@@ -5,6 +5,9 @@
   line-height: $lineHeightParagraph;
   color: $darkFontColor;
   padding-top: $buffer*2;
+  @include breakpoint(xs) {
+    padding-top: $lineHeightParagraph*2;
+  }
   .description {
     font-family: $secondaryFont;
     .header {
@@ -23,8 +26,8 @@
       color: $mediumFontColor;
       margin-bottom: $lineHeightParagraph*3;
       li {
-        padding-left: $lineHeightParagraph*3;
-        text-indent:-$lineHeightParagraph*3;
+        padding-left: $lineHeightParagraph;
+        text-indent:-$lineHeightParagraph;
       }
     }
   }
