@@ -10,7 +10,7 @@ import Contact from './pages/Contact/Contact';
 import './App.css';
 
 const routes = [
-  { path: '/', name: 'Home', Component: About },
+  { path: '/', name: 'Home', Component: Contact },
   // +
 ]
 
