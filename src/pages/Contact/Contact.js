@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import './Contact.scss';
 import PageContainer from '../../components/PageContainer/PageContainer'
@@ -11,8 +11,9 @@ const Contact = () => (
         <p>Taylor Zanke<br/>Los Angeles, CA</p>
         <p>taylor@taylorzankeoffice.com<br/>+ 1 917 826 7277</p>
         <Grid item container xs={12} sm={8} lg={6}>
-          <p>This site is temporarily under contruction.</p>
-          <p>Please send me an email to start or discuss a new project or collaboration.</p>
+          <p className="light">
+            This site is temporarily under contruction. Please send me an email to start or discuss a new project or collaboration.
+          </p>
         </Grid>
       </Grid>
     </Grid>
