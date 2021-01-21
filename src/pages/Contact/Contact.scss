@@ -5,6 +5,9 @@
   line-height: $lineHeightParagraph;
   color: $darkFontColor;
   padding-top: $buffer*2;
+  @include breakpoint(xs) {
+    padding-top: $lineHeightParagraph*2;
+  }
   .description {
     font-family: $secondaryFont;
     .header {
