@@ -13,7 +13,7 @@ const Graphics = () => (
   <PageContainer className="graphics">
     <Grid container>
 
-      <Grid container spacing={2}>
+      <Grid container>
         <Grid item xs={12} md={4}>
           Taylor Zanke Office
         </Grid>
@@ -30,7 +30,7 @@ const Graphics = () => (
         <img src={graphic1} className="graphic-image"/>
       </Grid>
 
-<Grid container spacing={2}>
+<Grid container>
       <Grid item xs={12} md={4}>
         INTRODUCTION
       </Grid>
@@ -47,7 +47,7 @@ const Graphics = () => (
         <img src={graphic2} className="graphic-image"/>
       </Grid>
 
-      <Grid container spacing={2}>
+      <Grid container>
       <Grid item xs={12} md={4}>
         CAPABILITIES
       </Grid>
