@@ -32,13 +32,18 @@ const Graphics = () => (
 
 <Grid container>
       <Grid item xs={12} md={4}>
-        INTRODUCTION
+       <p>INTRODUCTION</p>
       </Grid>
       <Grid item xs={12} md={8}>
+      <p>
       Taylor Zanke Office is the independent design practice of artist Taylor Zanke. The practice operates across disciplinary boundaries and looks for opportunities to translate knowledge and understanding between subject matter with fluidity and dexterity. Taylor is interested in developing collaborations and partnerships with individuals or institutions to communicate, define, and present ideas, stories, and values.
+      </p>
       </Grid>
       <Grid item xx={12}>
+        <p>
+
       A focus on engaging in contemporary culture encourages broad consideration of the media and format of communication and representation: developing ways of meeting an audience or expressing relevance that are unexpected. Taylor has a particular interest in the process of designing and its potential to provide a reflective context for all stakeholders by helping to translate sensibilities and concepts into form.
+        </p>
       </Grid>
 
 </Grid>
@@ -49,10 +54,13 @@ const Graphics = () => (
 
       <Grid container>
       <Grid item xs={12} md={4}>
-        CAPABILITIES
+        <p>CAPABILITIES</p>
       </Grid>
       <Grid item xs={12} md={8}>
+        <p>
+
       This office provides services across numerous media. Capabilities are listed below, and can be extended through a network of close collaborators in order to meet each project’s requirements.
+        </p>
       </Grid>
       <Grid item xs={12}>
       <ul>
