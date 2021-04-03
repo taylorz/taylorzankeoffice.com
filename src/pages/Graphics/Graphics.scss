@@ -1,0 +1,11 @@
+@import "../../styles/styles.scss";
+
+.graphics {
+  font-size: $fontSizeStatement;
+  line-height: $lineHeightStatement;
+  font-family: $secondaryFont;
+  color: green;
+  .graphic-image {
+    width: 100%;
+  }
+}//homepage

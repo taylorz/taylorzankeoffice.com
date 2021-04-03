@@ -7,10 +7,12 @@ import './styles/styles.scss';
 import Home from './pages/Homepage/Homepage';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
+import Graphics from './pages/Graphics/Graphics';
 import './App.css';
 
 const routes = [
-  { path: '/', name: 'Home', Component: About },
+  { path: '/', name: 'Home', Component: Graphics },
+  // { path: '/about', name: 'About', Component: About },
   // +
 ]
 
@@ -21,7 +23,7 @@ class App extends Component {
 
       <Router>
           <ScrollToTop/>
-          <Nav/>
+          {/* <Nav/> */}
           <Route render={({location}) => {
             const { key } = location
             return (
