@@ -5,7 +5,7 @@ import PageContainer from '../../components/PageContainer/PageContainer'
 
 const Contact = () => (
   <PageContainer className="contact">
-    <Grid container>
+    {/* <Grid container>
       <Grid item xs={0} sm={4} className="spacer"/>
       <Grid item xs={12} sm={8} md={6} lg={6} xl={4} className="description">
         <p>Taylor Zanke<br/>Los Angeles, CA</p>
@@ -16,7 +16,7 @@ const Contact = () => (
           </p>
         </Grid>
       </Grid>
-    </Grid>
+    </Grid> */}
   </PageContainer>
 )
 
